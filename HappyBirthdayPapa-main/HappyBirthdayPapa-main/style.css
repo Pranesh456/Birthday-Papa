@@ -1,0 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+body {
+  height: 97.7vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.959);
+  overflow: hidden;
+}
+
+.names {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  align-self: flex-start;
+  font-family: "Poppins", sans-serif;
+  color: gray;
+  background-color: black;
+  border-radius: 51px;
+}
+
+h2 {
+  position: absolute;
+  font-size: 9vw;
+  color: white;
+  text-align: center;
+  line-height: 2em;
+  transform: skewY(-7deg);
+  text-shadow: 1px 1px 0 #ccc, 2px 2px 0 #ccc, 3px 3px 0 #ccc, 4px 4px 0 #ccc,
+    5px 5px 0 #ccc, 10px 10px 0 rgba(0, 0, 0, 0.2);
+  animation: floating 5s ease-in-out infinite;
+  font-family: "Poppins", sans-serif;
+  top: 151px;
+}
+
+body i {
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff;
+  animation: animateStart linear infinite;
+}
+
+.cake {
+  height: 50vh;
+  width: 44vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  z-index: 100;
+}
+
+.candle__flameLight {
+  background: linear-gradient(to top, orangered, orange, yellow);
+  height: 4.4vh;
+  width: 0.85vw;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 21%;
+  border-bottom-left-radius: 21%;
+  border: 1px solid orangered;
+  animation: flameLightAnimation 4s ease-in-out infinite;
+  box-shadow: 0px 0px 17px 11px black;
+}
+
+.candle__flame {
+  background: linear-gradient(black, gray, white);
+  height: 0.2vh;
+  width: 0.2vw;
+  border: 1px dotted black;
+  box-shadow: 0px 0px 17px 11px black;
+}
+
+.candle {
+  background-color: red;
+  border-top-right-radius: 24%;
+  border-top-left-radius: 24%;
+  height: 9vh;
+  width: 1.11vw;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  box-shadow: 0px 0px 17px 11px black;
+}
+
+.cake__topLayer {
+  background-color: #fce0b9;
+  height: 12vh;
+  width: 24vw;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-top-right-radius: 80px;
+  border-top-left-radius: 80px;
+  background: linear-gradient(fuchsia, hotpink, magenta, pink);
+  box-shadow: 0px 0px 21px 11px black,
+    inset 21px 11px 51px rgba(255, 0, 255, 0.664),
+    inset -171px 11px 51px rgba(255, 20, 145, 0.685),
+    inset 0px 71px 51px rgba(255, 0, 255, 0.671),
+    inset 0px 71px 51px rgba(255, 192, 203, 0.877);
+}
+
+.cake__bottomLayer {
+  background-color: #fce0b9;
+  height: 17vh;
+  width: 33vw;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-top-right-radius: 71px;
+  border-top-left-radius: 71px;
+  background: linear-gradient(
+    orange,
+    rgb(250, 170, 22),
+    rgb(248, 179, 51),
+    rgb(236, 236, 40),
+    rgb(224, 224, 48),
+    rgb(219, 219, 75)
+  );
+  border-right: 1px solid rgba(255, 68, 0, 0.747);
+  border-left: 1px solid rgba(255, 68, 0, 0.671);
+  box-shadow: 0px 11px 21px 21px black,
+    inset 21px 11px 51px rgba(255, 255, 0, 0.726),
+    inset -171px 11px 51px rgba(255, 166, 0, 0.664), inset 0px 71px 51px yellow;
+}
+
+.cake__baseLayer {
+  width: 35vw;
+  height: 2vh;
+  background-color: coral;
+  border-top-right-radius: 51px;
+  border-top-left-radius: 51px;
+  border-top: 1px dashed red;
+  box-shadow: 0px 15px 21px 21px black;
+}
+
+.cake__base {
+  background-color: rgb(172, 169, 169);
+  height: 4vh;
+  width: 40vw;
+  border-radius: 51px;
+  border: 2px solid black;
+  box-shadow: 0px 4px 51px 11px black;
+}
+
+@media (max-width: 1100px) {
+  .cake {
+    width: 100%;
+  }
+
+  .candle__flameLight {
+    height: 4.4vh;
+    width: 0.85vw;
+  }
+
+  .candle__flame {
+    height: 0.2vh;
+    width: 0.2vw;
+  }
+
+  .candle {
+    height: 9vh;
+    width: 1.11vw;
+  }
+
+  .cake__topLayer {
+    height: 12vh;
+    width: 64vw;
+  }
+
+  .cake__bottomLayer {
+    height: 17vh;
+    width: 80vw;
+  }
+
+  .cake__baseLayer {
+    width: 85vw;
+    height: 2vh;
+  }
+
+  .cake__base {
+    height: 4vh;
+    width: 90vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .candle__flameLight {
+    height: 4.4vh;
+    width: 2vw;
+  }
+
+  .candle__flame {
+    height: 0.2vh;
+    width: 1vw;
+  }
+
+  .candle {
+    height: 7vh;
+    width: 2.11vw;
+  }
+
+  .cake__topLayer {
+    height: 8vh;
+    width: 54vw;
+  }
+  .cake__bottomLayer {
+    height: 11vh;
+    width: 80vw;
+  }
+
+  .cake__baseLayer {
+    width: 85vw;
+    height: 2vh;
+  }
+
+  .cake__base {
+    height: 4vh;
+    width: 95vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .cake__topLayer {
+    height: 8vh;
+    width: 50vw;
+  }
+}
+
+@keyframes floating {
+  0%,
+  100% {
+    transform: skewY(-7deg) translate(0, -20px);
+  }
+  50% {
+    transform: skewY(-7deg) translate(0, 20px);
+  }
+}
+
+@keyframes animateStart {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes flameLightAnimation {
+  0% {
+    box-shadow: 0px -4px 21px orange, 0px -4px 51px orange, 0px -4px 71px orange,
+      0px -4px 101px orange, 0px -4px 111px orange, 0px -4px 121px orange,
+      0px -4px 151px orange;
+    transform: skew(2deg, 4deg);
+  }
+  20% {
+    box-shadow: 0px -4px 21px yellow, 0px -4px 51px yellow, 0px -4px 71px yellow,
+      0px -4px 101px yellow, 0px -4px 111px yellow, 0px -4px 121px yellow,
+      0px -4px 151px yellow;
+    transform: skew(2deg, 4deg);
+  }
+  40% {
+    box-shadow: 0px -4px 21px orange, 0px -4px 51px orange, 0px -4px 71px orange,
+      0px -4px 101px orange, 0px -4px 111px orange, 0px -4px 121px orange,
+      0px -4px 151px orange;
+    transform: skew(-2deg, -8deg);
+  }
+  60% {
+    box-shadow: 0px -4px 21px yellow, 0px -4px 51px yellow, 0px -4px 71px yellow,
+      0px -4px 101px yellow, 0px -4px 111px yellow, 0px -4px 121px yellow,
+      0px -4px 151px yellow;
+    transform: skew(-5deg, -8deg);
+  }
+  80% {
+    box-shadow: 0px -4px 21px orange, 0px -4px 51px orange, 0px -4px 71px orange,
+      0px -4px 101px orange, 0px -4px 111px orange, 0px -4px 121px orange,
+      0px -4px 151px orange;
+    transform: skew(4deg, 6deg);
+  }
+  100% {
+    box-shadow: 0px -4px 21px yellow, 0px -4px 51px yellow, 0px -4px 71px yellow,
+      0px -4px 101px yellow, 0px -4px 111px yellow, 0px -4px 121px yellow,
+      0px -4px 151px yellow;
+    transform: skew(2deg, 4deg);
+  }
+}
